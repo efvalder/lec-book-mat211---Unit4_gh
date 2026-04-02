@@ -1,0 +1,41 @@
+project:
+  type: book
+  pre-render: "_setup.R"  # runs once before the book renders
+  # post-render: "Rscript something_after.R"  # (optional)
+
+execute: 
+  freeze: auto
+  setup: _setup.R
+
+python:
+   path: "C:/Users/evalderrama/viz-project/.venv/Scripts/python.exe"
+
+book:
+  title: "Lectures Notes on Differential Equations (Unit 4)"
+  author: "E. Valderrama-Araya, Ph.D."
+  date: "4/2/2026"
+  chapters:
+    - index.qmd
+    - Unit4/L29.qmd
+    - Unit4/L30.qmd
+    - Unit4/L31.qmd
+    - Unit4/L32.qmd
+    - previous_units.qmd
+    #- intro.qmd
+    #- summary.qmd
+    #- references.qmd
+
+bibliography: references.bib
+
+filters: 
+ - webr
+# quarto add coatless/quarto-webr
+
+format:
+  html:
+    theme: cosmo #i like solar and vapor # quartz # cyborg #cosmo
+  # pdf:
+  #   documentclass: scrreprt
+
+
+
