@@ -1,0 +1,402 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lectures Notes on Differential Equations (Unit 4)",
+    "section": "",
+    "text": "Preface to Unit 4:\n\\[{\\Large\n\\begin{bmatrix}\n\\dot{x} \\\\\n\\dot{y}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\na & b \\\\\nc & d\n\\end{bmatrix}\n\\begin{bmatrix}\nx \\\\\ny\n\\end{bmatrix}\n+\n\\begin{bmatrix}\nf(t) \\\\\ng(t)\n\\end{bmatrix}\n}\n\\]\n\nUnit 4 unfolds across four compelling lectures, each delving into intricate aspects of differential equations, showcasing a blend of theoretical exposition and practical application.\nLecture 29 begins the unit with an exploration of higher-order linear equations, introducing operator notation to simplify complex mathematical operations. It establishes the foundation of linear differential operators, demonstrating their application through examples. The lecture progresses to elucidate the concept of the Wronskian, a determinant used to determine the linear independence of functions, and discusses the structure and solutions of higher-order linear homogeneous ordinary differential equations (ODEs) with constant coefficients, including distinct real roots, complex roots, and repeated real roots, offering a methodical approach to solving these equations.\nLecture 30 shifts focus to systems of differential equations, emphasizing the significance of distinct eigenvalues. It delineates the process of finding eigenvalues and eigenvectors for a 2x2 system and extends these concepts to tackle real, distinct eigenvalues. Through illustrative examples, the lecture outlines the steps to determine the general solution of such systems, introducing a practical application of eigenvalues and eigenvectors in forming these solutions.\nLecture 31 addresses complex roots within the context of constant coefficient homogeneous systems. It presents a theorem for constructing a fundamental set of real solutions when the system exhibits complex roots, elucidating this with examples that demonstrate how to find the eigenvalues, eigenvectors, and ultimately, the general solution to systems characterized by complex roots.\nLecture 32 concludes the unit by exploring systems of differential equations with repeated eigenvalues. It provides a theoretical framework for understanding the implications of repeated eigenvalues on the system’s behavior and outlines a structured approach to finding the general solution, incorporating both theoretical insight and practical examples.\nCollectively, these lectures offer a comprehensive overview of solving higher-order differential equations and systems of equations, emphasizing the role of eigenvalues and eigenvectors in uncovering the dynamics of these systems. Through a blend of theory and examples, Unit 4 equips students with the knowledge and tools necessary to tackle complex differential equations, fostering a deeper understanding of their applications in various fields.",
+    "crumbs": [
+      "Preface to Unit 4:"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html",
+    "href": "Unit4/L29.html",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "",
+    "text": "1.1 Operator Notation",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#operator-notation",
+    "href": "Unit4/L29.html#operator-notation",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "",
+    "text": "NoteDefinition\n\n\n\nA differential operator \\(L\\) is linear iff for any two functions \\(y_1\\) and \\(y_2\\)\n\\[L[c_1y_1+c_2y_2]=c_1L[y_1]+c_2L[y_2]\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#example-1",
+    "href": "Unit4/L29.html#example-1",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.2 Example 1",
+    "text": "1.2 Example 1\n\n\n\n\n\n\nTipExample\n\n\n\nLet \\[ L = 3\\frac{d}{dx}+2\\frac{d^2}{dx^2}\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\\[L[c_1y_1+c_2y_2]=\\left(3\\frac{d}{dx}+2\\frac{d^2}{dx^2}\\right)\\left(c_1y_1+c_2y_2\\right)\\] \\[=c_1\\left(3\\frac{d}{dx}+2\\frac{d^2}{dx^2}\\right) y_1+c_2\\left(3\\frac{d}{dx}+2\\frac{d^2}{dx^2}\\right) y_2\\] \\[=c_1L[y_1]+c_2L[y_2]\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#theorem-for-higher-order",
+    "href": "Unit4/L29.html#theorem-for-higher-order",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.3 Theorem for higher order",
+    "text": "1.3 Theorem for higher order\n\n\n\n\n\n\nNoteTheorem\n\n\n\n\nTheorem 1.1 If \\(a_n(x),a_{n-1}(x),\\cdots,a_0(x)\\) are continuous over the interval \\(I\\), and if \\(a_n(x)\\neq 0\\) then \\[L[y]=0 \\tag{1.1}\\] where \\[L=a_n(x)\\frac{d^n}{dx^n}+\\cdots+a_1(x)\\frac{d}{dx}+a_0(x)\\] has \\(n\\) linearly independent solutions \\[y_1(x),\\cdots,y_n(x)\\] Furthermore if \\(y(x)\\) is any solution to Equation 1.1 then \\(\\exists \\, c_1,c_2,\\cdots,c_n\\in\\mathbb{R}\\) such that \\[y(x)=c_1y_1+c_2y_2+\\cdots +c_ny_n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#wronskian",
+    "href": "Unit4/L29.html#wronskian",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.4 Wronskian",
+    "text": "1.4 Wronskian\n\n\n\n\n\n\nNoteDefinition\n\n\n\nThe Wronskian of a set of functions \\[f_1(x),f_2(x),\\cdots,f_n(x)\\] is equal to the determinant\n\\[\\begin{vmatrix} f_1(x) & f_2(x) &\\dots & f_n(x)\\\\ f_1'(x) & \\ddots && \\vdots\\\\\n\\vdots &&\\ddots&\\vdots\\\\\nf_1^{(n-1)}(x) & f_2^{(n-1)}(x) &\\dots & f_n^{(n-1)}(x)\n\\end{vmatrix}\\]\nand is denoted by \\(W[f_1(x),\\cdots,f_n(x)]\\)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#theorem-for-wronskian",
+    "href": "Unit4/L29.html#theorem-for-wronskian",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.5 Theorem for Wronskian",
+    "text": "1.5 Theorem for Wronskian\n\n\n\n\n\n\nNoteTheorem\n\n\n\n\nTheorem 1.2 \\(\\{f_1(x),f_2(x),\\cdots,f_n(x)\\}\\) are linearly independent on \\(I\\) iff \\[W[f_1(x),\\cdots,f_n(x)]\\neq 0\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#example-2",
+    "href": "Unit4/L29.html#example-2",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.6 Example 2",
+    "text": "1.6 Example 2\n\n\n\n\n\n\nTipExample\n\n\n\n\\(f_1(x)=\\cos x,\\qquad f_2(x)=\\sin x\\)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#example-3-1",
+    "href": "Unit4/L29.html#example-3-1",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.7 Example 3",
+    "text": "1.7 Example 3\n\n\n\n\n\n\nTipExample\n\n\n\n\\(f_1(x)=e^x,\\qquad f_2(x)=x e^x\\)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#stholhodeswcc",
+    "href": "Unit4/L29.html#stholhodeswcc",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.8 STHOLH/ODES/WCC",
+    "text": "1.8 STHOLH/ODES/WCC\n\n\n\n\n\n\nNoteDefinition\n\n\n\nSolutions to higher order Linear Homogeneous ODES1 with constant coefficients\n\\[a_{n}y^{(n)}+a_{n-1}y^{(n-1)}+\\cdots+a_1y'+a_0y=0 \\tag{1.2}\\]\nCharacteristic Equation:\n\\[a_nr^n+a_{n-1}r^{n-1}+\\cdots+a_1r+a_0=0 \\tag{1.3}\\]\nhas \\(n\\) solutions.\n\n1.9 Distinct real roots\nIf \\(r_1,\\cdots,r_k\\), with \\(k\\leq n\\), are distinct real roots of Equation 1.3 then\n\\[y=c_1e^{r_1x}+c_2e^{r_2x}+\\cdots+c_ke^{r_kx}\\] is a solution to Equation 1.2\n\n\n1.10 Complex real roots\nIf \\(\\alpha_1\\pm i\\beta_1,\\quad\\alpha_2\\pm i\\beta_2,\\quad\\cdots\\quad,\\alpha_k\\pm i\\beta_k\\), are roots of Equation 1.3 with \\(k\\leq \\frac{n}{2}\\). Then \\[y=e^{\\alpha_1x}(c_{11}\\cos\\beta_1x+c_{12}\\sin\\beta_1x)\\] \\[+e^{\\alpha_2x}(c_{21}\\cos\\beta_2x+c_{22}\\sin\\beta_2x)\\] \\[+\\cdots+e^{\\alpha_kx}(c_{k1}\\cos\\beta_kx+c_{k2}\\sin\\beta_kx)\\] is a solution to Equation 1.2\n\n\n1.11 Repeated real roots\nIf \\(r=m\\) is a \\(k\\) repeated root of Equation 1.2, with \\(k\\leq n\\), Then\n\\[y=c_1e^{mx}+c_2xe^{mx}+c_3x^2e^{mx}\\cdots+c_kx^{k-1}e^{mx}\\] is a solution to Equation 1.3",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#distinct-real-roots",
+    "href": "Unit4/L29.html#distinct-real-roots",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.9 Distinct real roots",
+    "text": "1.9 Distinct real roots\nIf \\(r_1,\\cdots,r_k\\), with \\(k\\leq n\\), are distinct real roots of Equation 1.3 then\n\\[y=c_1e^{r_1x}+c_2e^{r_2x}+\\cdots+c_ke^{r_kx}\\] is a solution to Equation 1.2",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#complex-real-roots",
+    "href": "Unit4/L29.html#complex-real-roots",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.10 Complex real roots",
+    "text": "1.10 Complex real roots\nIf \\(\\alpha_1\\pm i\\beta_1,\\quad\\alpha_2\\pm i\\beta_2,\\quad\\cdots\\quad,\\alpha_k\\pm i\\beta_k\\), are roots of Equation 1.3 with \\(k\\leq \\frac{n}{2}\\). Then \\[y=e^{\\alpha_1x}(c_{11}\\cos\\beta_1x+c_{12}\\sin\\beta_1x)\\] \\[+e^{\\alpha_2x}(c_{21}\\cos\\beta_2x+c_{22}\\sin\\beta_2x)\\] \\[+\\cdots+e^{\\alpha_kx}(c_{k1}\\cos\\beta_kx+c_{k2}\\sin\\beta_kx)\\] is a solution to Equation 1.2",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#repeated-real-roots",
+    "href": "Unit4/L29.html#repeated-real-roots",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.11 Repeated real roots",
+    "text": "1.11 Repeated real roots\nIf \\(r=m\\) is a \\(k\\) repeated root of Equation 1.2, with \\(k\\leq n\\), Then\n\\[y=c_1e^{mx}+c_2xe^{mx}+c_3x^2e^{mx}\\cdots+c_kx^{k-1}e^{mx}\\] is a solution to Equation 1.3",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#example-4-1",
+    "href": "Unit4/L29.html#example-4-1",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.12 Example 4",
+    "text": "1.12 Example 4\n\n\n\n\n\n\nTipExample\n\n\n\nSolve:\n\\[y^{(5)}+3y^{(3)}-4y'=0\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\nCharacteristic eq\\(^n\\):\n\\[r^5+3r^3-4r=0\\] \\[r(r^4+3r^2-4)=0\\]\nLet \\(u=r^2\\) \\(\\rightarrow (r^4+3r^2-4)=(u^2+3u-4)=(u-1)(u+4)\\)\n\\[\\Rightarrow r(r^2-1)(r^2+4)=0\\]\n\\[r(r+1)(r-1)(r+2i)(r-2i)=0\\]\n\\[r_{oots}=0,-1,1,-2i,2i,\\] \\[\\boxed{y=c_1+c_2e^{-x}+c_3e^x+c_4\\cos 2x+c_5\\sin 2x}\\] is the general solution.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#references",
+    "href": "Unit4/L29.html#references",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "1.13 References",
+    "text": "1.13 References\n\nLibreTexts, 9.1: Linear Higher Order Equations by F.Trench.\nKhan: n x n determinant",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L29.html#footnotes",
+    "href": "Unit4/L29.html#footnotes",
+    "title": "1  L29: 9.1 Higher-Order Linear Equations.",
+    "section": "",
+    "text": "In mathematics, an ordinary differential equation (ODE) is a differential equation (DE) dependent on only a single independent variable.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>L29: 9.1 Higher-Order Linear Equations.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L30.html",
+    "href": "Unit4/L30.html",
+    "title": "2  L30: 10.4 Distinct Eigenvalues",
+    "section": "",
+    "text": "3 Intro\nA system of differential equations consists of multiple differential equations that involve the same set of variables and their derivatives. These systems are commonly used to model situations where multiple related quantities change with respect to one another, typically over time. The variables can represent different physical quantities, like position, velocity, temperature, or chemical concentrations, depending on the context of the problem.\nThere are two main types of systems of differential equations:\nSystems of differential equations can be linear or nonlinear, and they can be solved using various methods, depending on their complexity and the characteristics of the equations involved. Analytical solutions are available for simpler systems, while numerical methods might be necessary for more complex or nonlinear systems.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L30: 10.4 Distinct Eigenvalues</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L30.html#wronskian-to-test-if-vectors-solutions-are-independent",
+    "href": "Unit4/L30.html#wronskian-to-test-if-vectors-solutions-are-independent",
+    "title": "2  L30: 10.4 Distinct Eigenvalues",
+    "section": "3.1 Wronskian to test if vectors solutions are independent",
+    "text": "3.1 Wronskian to test if vectors solutions are independent\n\n\n\n\n\n\nNoteDefinition\n\n\n\nplace each vector solution in each column, then calculate the determinant of the matrix\n\\[\\det(W)=\\begin{vmatrix}\na & b & c \\\\\nd & e & f \\\\\ng & h & i \\\\\n\\end{vmatrix}\n\\]\nif \\(\\det(W)\\neq 0\\), then solutions are independent of each other\n\n\n\n3.1.1 Example\n\n\n\n\n\n\nTipExample\n\n\n\nTest if \\(y_1, y_2,\\text{ and }y_3\\) are independent solutions:\n\nVector Solution \\(\\mathbf{y}_1(t)\\): \\[\n\\mathbf{y}_1(t) = \\begin{bmatrix} e^t \\\\ t^2 \\\\ \\sin(t) \\end{bmatrix}\n\\]\nVector Solution \\(\\mathbf{y}_2(t)\\): \\[\n\\mathbf{y}_2(t) = \\begin{bmatrix} t e^t \\\\ 1 \\\\ \\cos(t) \\end{bmatrix}\n\\]\nVector Solution \\(\\mathbf{y}_3(t)\\): \\[\n\\mathbf{y}_3(t) = \\begin{bmatrix} e^{-t} \\\\ t \\\\ t \\sin(t) \\end{bmatrix}\n\\]\n\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\\[\nW =\n\\begin{bmatrix}\ne^t & t e^t & e^{-t} \\\\\n2t & e^t + t e^t & -e^{-t} \\\\\n\\cos(t) & -\\sin(t) & t \\cos(t)\n\\end{bmatrix}\n\\]\n\\[\\cdots\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L30: 10.4 Distinct Eigenvalues</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L30.html#example-1-1",
+    "href": "Unit4/L30.html#example-1-1",
+    "title": "2  L30: 10.4 Distinct Eigenvalues",
+    "section": "4.1 Example 1:",
+    "text": "4.1 Example 1:\n\n\n\n\n\n\nTipExample\n\n\n\n\\[\\frac{dx}{dt}=x-y\\]\n\\[\\frac{dy}{dt}=2x+4y\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\n4.1.1 Step 1:(eigenvalues)\n\\[\\begin{vmatrix}\na-\\lambda & b\\\\\nc & d-\\lambda\n\\end{vmatrix}\\Rightarrow\\begin{vmatrix}\n1-\\lambda & -1\\\\\n2 & 4-\\lambda\n\\end{vmatrix} =0\\]\n\\[\\lambda^2-5\\lambda+6=0\\]\n\\[(\\lambda-2)(\\lambda-3)=0\\] \\[\\lambda_{1,2}= \\{2,3\\}\\]\n\n\n4.1.2 Step 2:(eigenvectors)\n\n\\(\\boxed{\\lambda=2}\\)\n\\[\\begin{bmatrix}\n1-2 & -1\\\\\n2 & 4-2\n\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=0\\]\n\\[\\Rightarrow\\begin{bmatrix}\n-1 & -1\\\\\n2& 2\n\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=0\\]\n\\[-k_1-k_2=0\\]\npick \\(k_1=1\\) \\(\\Rightarrow k_2=-1\\) (\\(k_1\\) arbitrary)\nEigenvector: \\(\\begin{bmatrix}1\\\\-1\\end{bmatrix}\\)\n\n\\(\\boxed{\\lambda=3}\\)\n\\[\\begin{bmatrix}\n1-3 & -1\\\\\n2 & 4-3\n\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=0\\]\n\\[\\Rightarrow\\begin{bmatrix}\n-2 & -1\\\\\n2& 1\n\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=0\\]\n\\[\\Rightarrow 2k_1+k_2=0\\Rightarrow k_1=1\\Rightarrow k_2=-2\\] Eigenvector: \\(\\begin{bmatrix}1\\\\-2\\end{bmatrix}\\)\n\n\n4.1.3 Step 3:(general solution)\n\n\\[\\begin{bmatrix}x\\\\y\\end{bmatrix}=\\begin{bmatrix}1\\\\-1\\end{bmatrix}c_1e^{2t}+\\begin{bmatrix}1\\\\-2\\end{bmatrix}c_2e^{3t}\\]\n\n\nOR\n\\[x(t)=c_1e^{2t}+c_2e^{3t}\\] \\[y(t)=-c_1e^{2t}-2c_2e^{3t}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L30: 10.4 Distinct Eigenvalues</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L30.html#example-2-1",
+    "href": "Unit4/L30.html#example-2-1",
+    "title": "2  L30: 10.4 Distinct Eigenvalues",
+    "section": "4.2 Example 2",
+    "text": "4.2 Example 2\n\n\n\n\n\n\nTipExample\n\n\n\n\\[\\frac{dx}{dt}=3x\\]\n\\[\\frac{dy}{dt}=2x-y\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\nStep 1(eigenvalues):\n\n\\[\\begin{vmatrix}\n3-\\lambda & 0\\\\\n2 & -1-\\lambda\n\\end{vmatrix}=0\\]\n\\[(3-\\lambda)(-1-\\lambda)-0=0\\] \\[(\\lambda-3)(\\lambda+1)=0\\] \\[\\boxed{\\lambda=3},\\quad \\boxed{\\lambda=-1}\\]\n\n\nStep 2(eigenvector 1):\n\n\\(\\boxed{\\lambda=3}\\)\n\n\\[\\begin{bmatrix}\n3-3 & 0\\\\\n2 & -1-3\n\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=\\begin{bmatrix}0\\\\0\\end{bmatrix}\\]\n\n\n\\[2k_1-4k_2=0\\] \\[k_1-2k_2=0\\] \\[k_1=2k_2\\]\n\n\nEigenvector 1: \\(\\begin{bmatrix}2\\\\1\\end{bmatrix}\\)\n\n\nStep 2(eigenvector 2):\n\\(\\boxed{\\lambda=-1}\\)\n\\[\\begin{bmatrix}\n3-^-1 & 0\\\\\n2 & -1-^-1\n\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=\\begin{bmatrix}0\\\\0\\end{bmatrix}\\]\n\\[4k_1+0=0\\rightarrow k_1=0\\rightarrow k_2=\\text{my choice}=1\\]\nEigenvector 2: \\(\\begin{bmatrix}0\\\\1\\end{bmatrix}\\)\n\n\nStep 3(general solution):\n\n\n\\[\\begin{bmatrix}x\\\\y\\end{bmatrix}=\\begin{bmatrix}2\\\\1\\end{bmatrix}c_1e^{3t}+\\begin{bmatrix}0\\\\1\\end{bmatrix}c_2e^{-t}\\]\n\n\n\n4.3 Using R\n\nA &lt;- matrix(c(3, 0, 2, -1), 2, 2, byrow=TRUE)\nA\n\n     [,1] [,2]\n[1,]    3    0\n[2,]    2   -1\n\neigen(A)\n\neigen() decomposition\n$values\n[1]  3 -1\n\n$vectors\n          [,1] [,2]\n[1,] 0.8944272    0\n[2,] 0.4472136    1\n\n\nEach column are the normalized eigenvectors, i.e\n\\[\\frac{1}{\\sqrt{2^2+1^2}}\\begin{bmatrix}2\\\\1\\end{bmatrix}=\\begin{bmatrix}0.8944272\\\\0.4472136\\end{bmatrix}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L30: 10.4 Distinct Eigenvalues</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L30.html#using-r",
+    "href": "Unit4/L30.html#using-r",
+    "title": "2  L30: 10.4 Distinct Eigenvalues",
+    "section": "4.3 Using R",
+    "text": "4.3 Using R\n\nA &lt;- matrix(c(3, 0, 2, -1), 2, 2, byrow=TRUE)\nA\n\n     [,1] [,2]\n[1,]    3    0\n[2,]    2   -1\n\neigen(A)\n\neigen() decomposition\n$values\n[1]  3 -1\n\n$vectors\n          [,1] [,2]\n[1,] 0.8944272    0\n[2,] 0.4472136    1\n\n\nEach column are the normalized eigenvectors, i.e\n\\[\\frac{1}{\\sqrt{2^2+1^2}}\\begin{bmatrix}2\\\\1\\end{bmatrix}=\\begin{bmatrix}0.8944272\\\\0.4472136\\end{bmatrix}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L30: 10.4 Distinct Eigenvalues</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L30.html#example-3-1",
+    "href": "Unit4/L30.html#example-3-1",
+    "title": "2  L30: 10.4 Distinct Eigenvalues",
+    "section": "4.4 Example 3",
+    "text": "4.4 Example 3\n\n\n\n\n\n\nTipExample\n\n\n\nFind the general solution of\n\\[{\\bf y}'=\\left[\\begin{array}{rrr}3&-1&-1\\\\-2& 3& 2\\\\4&-1&-2\\end{array}\\right]{\\bf y}\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\\[\\left|\\begin{array}{ccc}3-\\lambda&-1&-1\\\\-2&3-\\lambda& 2\\\\4 &-1&-2-\\lambda\\end{array}\\right|=-(\\lambda-2)(\\lambda-3)(\\lambda+1).\\nonumber\\]\n\n\n\n\n\n\nCautionNarrative:\n\n\n\n\n\nSolving a \\(3 \\times 3\\) system of linear differential equations often involves a methodical approach that can be extended from methods used in smaller systems. Here’s a step-by-step explanation of the typical methods used, primarily focusing on homogeneous systems:\n\n4.4.1 1. Write the System in Matrix Form\nFirst, express the system of differential equations in matrix form. Suppose we have: \\[\\frac{d\\mathbf{x}}{dt} = A \\mathbf{x}\\] where \\(\\mathbf{x}\\) is the vector of variables, and \\(A\\) is a \\(3 \\times 3\\) matrix containing the coefficients of the system.\n\n\n4.4.2 2. Find the Eigenvalues and Eigenvectors\nThe next step is to solve the characteristic equation of the matrix \\(A\\), which is given by: \\[\\det(A - \\lambda I) = 0\\] where \\(\\lambda\\) is a scalar (the eigenvalue), and \\(I\\) is the \\(3 \\times 3\\) identity matrix. This will yield a cubic equation in \\(\\lambda\\), solving which gives us the eigenvalues.\n\n\n4.4.3 3. Compute the Eigenvectors\nFor each eigenvalue \\(\\lambda_i\\), find the corresponding eigenvector \\(\\mathbf{v}_i\\) by solving: \\[(A - \\lambda_i I) \\mathbf{v}_i = \\mathbf{0}\\] This system of equations may sometimes need to be solved using methods like Gaussian elimination.\n\n\n4.4.4 4. Form the General Solution\nIf the eigenvalues are distinct, the general solution to the differential equation can be expressed as: \\[\\mathbf{x}(t) = c_1 e^{\\lambda_1 t} \\mathbf{v}_1 + c_2 e^{\\lambda_2 t} \\mathbf{v}_2 + c_3 e^{\\lambda_3 t} \\mathbf{v}_3\\] where \\(c_1, c_2,\\) and \\(c_3\\) are constants determined by the initial conditions.\n\n\n4.4.5 5. Handle Special Cases\n\nRepeated Eigenvalues: If any eigenvalue is repeated, you may need to find generalized eigenvectors to form a complete set of solutions.\n\nComplex Eigenvalues: If the eigenvalues are complex, the solution will involve trigonometric functions (sines and cosines) and possibly exponential functions, reflecting oscillatory behavior.\n\n\n\n4.4.6 6. Use Initial Conditions\nFinally, use the initial conditions provided to solve for the constants \\(c_1, c_2,\\) and \\(c_3\\).\nThis approach will allow you to solve any \\(3 \\times 3\\) system of linear differential equations, assuming it can be described by constant coefficients and is homogeneous. Non-homogeneous systems (i.e., systems with a non-zero right-hand side) would typically require additional steps such as finding a particular solution.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L30: 10.4 Distinct Eigenvalues</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L30.html#you-can-play-with-r-here",
+    "href": "Unit4/L30.html#you-can-play-with-r-here",
+    "title": "2  L30: 10.4 Distinct Eigenvalues",
+    "section": "5.1 You can play with R here!!!",
+    "text": "5.1 You can play with R here!!!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L30: 10.4 Distinct Eigenvalues</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L30.html#footnotes",
+    "href": "Unit4/L30.html#footnotes",
+    "title": "2  L30: 10.4 Distinct Eigenvalues",
+    "section": "",
+    "text": "In the 18th century, Leonhard Euler studied the rotational motion of a rigid body, and discovered the importance of the principal axes.[a] Joseph-Louis Lagrange realized that the principal axes are the eigenvectors of the inertia matrix↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>L30: 10.4 Distinct Eigenvalues</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html",
+    "href": "Unit4/L31.html",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "",
+    "text": "3.1 Complex Eigenvalues/Eigenvectors",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html#complex-eigenvalueseigenvectors",
+    "href": "Unit4/L31.html#complex-eigenvalueseigenvectors",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "",
+    "text": "Note\n\n\n\n\nTheorem 3.1 (Theorem) Let \\(\\lambda=\\alpha+i\\beta,\\qquad \\beta&gt;0\\)\nLet \\(K\\) be eigenvector associated with \\(\\lambda\\)\n\\[K=\\begin{bmatrix}u_1+iv_1\\\\u_2+iv_2\\end{bmatrix}\\]\nThen \\[x_1=e^{\\alpha t}(B_1\\cos \\beta t +B_2\\sin \\beta t)\\]\n\\[x_2=e^{\\alpha t}(B_2\\cos \\beta t -B_1\\sin \\beta t)\\]\nis a fundamental set of real solution to our \\(2\\times 2\\) system, where:\n\\[B_1=\\begin{bmatrix}u_1\\\\u_2\\end{bmatrix},\\qquad B_2=-\\begin{bmatrix}v_1\\\\v_2\\end{bmatrix}\\]\n\n\n\n\n3.1.1 Example 1:\n\n\n\n\n\n\nTipExample\n\n\n\n\\[\\frac{dx}{dt}=3x-y\\]\n\\[\\frac{dy}{dt}=x+3y\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\nStep 1:(eigenvalues)\n\\[\\begin{vmatrix}\n3-\\lambda & -1\\\\\n1 & 3-\\lambda\n\\end{vmatrix} =0\\]\n\\[\\lambda^2-6\\lambda+10=0\\]\n\\[\\lambda=\\frac{6\\pm \\sqrt{36-40}}{2}\\] \\[=\\frac{6\\pm \\sqrt{-4}}{2}=\\frac{6\\pm 2\\sqrt{-1} }{2}=\\boxed{3\\pm i}\\]\nStep 2:(eigenvector K)\n\\(\\boxed{\\lambda=(3+i)}\\)\n\\[\\begin{bmatrix}\n3-(3+i) & -1\\\\\n1 & 3-(3+i)\n\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=\\begin{bmatrix}0\\\\0\\end{bmatrix}\\]\n\\[k_1-ik_2=0\\] \\[k_1=ik_2\\]\n\\[\\Rightarrow K= \\begin{bmatrix}i\\\\1\\end{bmatrix}=\\begin{bmatrix}0+1i\\\\1+0i\\end{bmatrix}\\]\n\\[\\Rightarrow B_1=\\begin{bmatrix}0\\\\1\\end{bmatrix},\\qquad B_2=-\\begin{bmatrix}1\\\\0\\end{bmatrix}=\\begin{bmatrix}-1\\\\0\\end{bmatrix}\\] Step 3:(Fundamental set)\n\\[\\vec{x_1}=e^{3t}\\left(\\begin{bmatrix}0\\\\1\\end{bmatrix}\\cos t+\\begin{bmatrix}-1\\\\0\\end{bmatrix}\\sin t\\right)\\] and\n\\[\\vec{x_2}=e^{3t}\\left(\\begin{bmatrix}-1\\\\0\\end{bmatrix}\\cos t-\\begin{bmatrix}0\\\\1\\end{bmatrix}\\sin t\\right)\\]\nand the general solution will be the linear combination of the fundamental set of real solutions.\n\n\n\n\n\n\n\n3.1.2 Example 2:\n\n\n\n\n\n\nTipExample\n\n\n\nFind the general solution of\n\\[\\frac{d\\vec{r}}{dt}=\\begin{bmatrix}4&-5\\\\5&-2\\end{bmatrix}\\vec{r}\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\\[\\begin{bmatrix}x'\\\\y'\\end{bmatrix}=\\begin{bmatrix}4&-5\\\\5&-2\\end{bmatrix}\\begin{bmatrix}x\\\\y\\end{bmatrix}\\]\n\n3.1.3 Eigenvalues\n\\[\\begin{vmatrix}4-\\lambda & -5\\\\ 5& -2-\\lambda\\end{vmatrix}=0\\]\n\\[\\lambda^2-2\\lambda+17=0\\] \\[\\lambda=\\frac{+2-\\sqrt{4-4\\cdot 17}}{2}\\]\n\\[\\lambda=\\frac{+2-\\sqrt{-4\\cdot 16}}{2} = 1\\pm 4i\\]\n\n\n3.1.4 Eigenvectors\nDifferent representation, same method:\n\\(\\boxed{\\lambda = 1+ 4i}\\)\n\\[\\begin{bmatrix}4-(1+ 4i) & -5 &\\vdots&0\\\\ 5& -2-(1+ 4i)&\\vdots&0\\end{bmatrix}\\] \\[\\begin{bmatrix}3-4i & -5 &\\vdots&0\\\\ 5& -3-4i&\\vdots&0\\end{bmatrix}\\] \\[(3-4i)k_1-5k_2=0\\]\n\n\\[\\frac{(3-4i)}{5}k_1=k_2\\]\nWe choose \\[k_1=5 \\rightarrow k_2=3-4i\\]\n\\[\\Rightarrow{K=\\begin{bmatrix}5\\\\3-4i\\end{bmatrix}=\\begin{bmatrix}5+0i\\\\3-4i\\end{bmatrix}}\\]\n\\[\\Rightarrow B_1=\\begin{bmatrix}5\\\\3\\end{bmatrix},\\qquad B_2=-\\begin{bmatrix}0\\\\-4\\end{bmatrix}=\\begin{bmatrix}0\\\\4\\end{bmatrix}\\]\n\n\n3.1.5 Fundamental set\nThen \\[\\vec{x_1}=e^{\\alpha t}(B_1\\cos \\beta t +B_2\\sin \\beta t)\\]\n\\[\\vec{x_1}=e^{t}\\left(\\begin{bmatrix}5\\\\3\\end{bmatrix}\\cos 4 t +\\begin{bmatrix}0\\\\4\\end{bmatrix}\\sin 4 t\\right)\\]\n\\[\\vec{x_2}=e^{\\alpha t}(B_2\\cos \\beta t -B_1\\sin \\beta t)\\] \\[\\vec{x_2}=e^{t}\\left(\\begin{bmatrix}0\\\\4\\end{bmatrix}\\cos 4 t +\\begin{bmatrix}-5\\\\-3\\end{bmatrix}\\sin 4 t\\right)\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html#using-r",
+    "href": "Unit4/L31.html#using-r",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "3.2 Using R",
+    "text": "3.2 Using R\n\nA &lt;- matrix(c(4, -5, 5, -2), 2, 2, byrow=TRUE)\nprint(A)\n\n     [,1] [,2]\n[1,]    4   -5\n[2,]    5   -2\n\n# Calculate the Eigenvalues and Eigenvectors and storing in a variable `res`\nres &lt;- eigen(A)\n\n# Eigenvalues\nlambda &lt;- res$values\nprint(lambda)\n\n[1] 1+4i 1-4i\n\n# Eigenvectors\nvectors &lt;- res$vectors\nprint(vectors)\n\n                     [,1]                 [,2]\n[1,] 0.4242641+0.5656854i 0.4242641-0.5656854i\n[2,] 0.7071068+0.0000000i 0.7071068+0.0000000i\n\n\n\n\n\n\n\n\nCautionCode description\n\n\n\n\n\nThese code initializes a matrix named A. Here’s a breakdown of what each part of the function does:\n\nmatrix(): This is the function used in R to create a matrix. A matrix is a two-dimensional array of numbers.\nc(4, -5, 5, -2): This is a vector containing the elements that will be filled into the matrix. The elements are 4, -5, 5, and -2.\n2, 2: These numbers define the dimensions of the matrix. The first number (2) is the number of rows, and the second number (2) is the number of columns. So, this matrix will be a 2x2 matrix.\nbyrow=TRUE: This argument specifies how the matrix is filled with the elements from the vector. If byrow=TRUE, the matrix is filled row-wise from the vector. This means that the first two elements of the vector (4 and -5) will make up the first row of the matrix, and the next two elements (5 and -2) will make up the second row.\n\nTherefore, the resulting matrix A will look like this:\n\\[\n\\begin{matrix}\n4 & -5 \\\\\n5 & -2 \\\\\n\\end{matrix}\n\\]\nThis matrix is stored in the variable A.\n\n\n\nR has not problem working with imaginary eigenvectors…",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html#using-maxima-cas",
+    "href": "Unit4/L31.html#using-maxima-cas",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "3.3 Using maxima-CAS",
+    "text": "3.3 Using maxima-CAS\n\n(%i1) A:matrix([4,-5],[5,-2]);\n\n(%o1) matrix([4,-5],[5,-2])\n\n(%i2) eigenvectors(A);\n\n(%o2) [[[1-4*%i,4*%i+1],[1,1]],[[[1,(4*%i+3)/5]],[[1,-((4*%i-3)/5)]]]]\n\n\n\n\n\n\n\n\nCautionCode description\n\n\n\n\n\neigenvectors. Computes eigenvectors of the matrix M. The return value is a list of two elements. The first is a list of the eigenvalues of M and a list of the multiplicities of the eigenvalues. The second is a list of lists of eigenvectors. There is one list of eigenvectors for each eigenvalue. There may be one or more eigenvectors in each list.\nmaxima-CAS has not problem working with complex numbers either.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html#using-python",
+    "href": "Unit4/L31.html#using-python",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "3.4 Using python",
+    "text": "3.4 Using python\n\nimport numpy as np\n\n# Creating the matrix A\nA = np.array([[4, -5], [5, -2]])\n\n# Calculating the eigenvalues and eigenvectors\neigenvalues, eigenvectors = np.linalg.eig(A)\n\nprint(eigenvalues,eigenvectors)\n\n[1.+4.j 1.-4.j] [[0.42426407+0.56568542j 0.42426407-0.56568542j]\n [0.70710678+0.j         0.70710678-0.j        ]]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html#using-matlab",
+    "href": "Unit4/L31.html#using-matlab",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "3.5 Using matlab",
+    "text": "3.5 Using matlab\n% Define the matrix A\nA = [4 -5; 5 -2];\ndisp('Matrix A:');\ndisp(A);\n\n% Calculate the Eigenvalues and Eigenvectors\n[V, D] = eig(A);\n\n% Eigenvalues (stored diagonally in D)\ndisp('Eigenvalues:');\ndisp(diag(D));\n\n% Eigenvectors (stored as columns in V)\ndisp('Eigenvectors:');\ndisp(V);",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html#you-can-play-with-r-here",
+    "href": "Unit4/L31.html#you-can-play-with-r-here",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "3.6 You can play with R here!!!",
+    "text": "3.6 You can play with R here!!!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html#if-time-allows",
+    "href": "Unit4/L31.html#if-time-allows",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "3.7 If time allows",
+    "text": "3.7 If time allows\n\n3.7.1 Example 3:\n\n\n\n\n\n\nTipExample\n\n\n\n\\[{\\bf y}'=\\left[\\begin{array}{cc}{-14}&{39}\\\\{-6}&{16}\\end{array}\\right]{\\bf y}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L31.html#references",
+    "href": "Unit4/L31.html#references",
+    "title": "3  L31: 10.6 Complex Eigenvalues.",
+    "section": "3.8 References",
+    "text": "3.8 References\n\nLibreTexts, 10.6: Constant Coefficient Homogeneous Systems III by F.Trench.\nWikipedia: Eigenvalues and eigenvectors\nR CRAN documentation for eigenvalues and eigenvectors\nmaxima-CAS documentation for eigenvalues and eigenvectors\n\n\n\n\n\n\n\nCautionR-script with initial conditions\n\n\n\n\n\nNot tested yet\nTo create an R script that computes the general solution of a system of linear differential equations using eigenvalues and eigenvectors. This code will compute the solution given initial conditions and will be useful for simulation or analysis purposes.\n\n3.8.1 R Script Overview\n\nDefine the matrix ( A ).\nCalculate eigenvalues and eigenvectors using eigen().\nCreate a function to calculate ( x(t) ) at any given time ( t ) based on initial conditions ( x(0) ).\n\n\n\n3.8.2 Step-by-Step R Code\n\n# Load ggplot2 for plotting\nlibrary(ggplot2)\n\n# Define the matrix A\nA &lt;- matrix(c(4, -5, 5, -2), 2, 2, byrow = TRUE)\n\n# Compute eigenvalues and eigenvectors\neig &lt;- eigen(A)\n\n# Eigenvalues\nlambdas &lt;- eig$values\n\n# Eigenvectors\nvectors &lt;- eig$vectors\n\n# Function to compute x(t) for given initial conditions and time t\ncompute_xt &lt;- function(t, initial_conditions) {\n  # Ensure the initial_conditions is a matrix\n  initial_conditions &lt;- matrix(initial_conditions, nrow = 2)\n  \n  # Constants c1 and c2 from initial conditions, solving the linear system\n  # vectors %*% c = initial_conditions\n  # c is the vector of coefficients [c1; c2]\n  coefficients &lt;- solve(vectors, initial_conditions)\n  \n  # Compute x(t) = c1 * exp(lambda1 * t) * vector1 + c2 * exp(lambda2 * t) * vector2\n  xt &lt;- vectors %*% (coefficients * exp(lambdas * t))\n  \n  # Return the computed x(t) considering only the real parts\n  return(Re(xt))\n}\n\n# Time range from 0 to 10, computing at intervals of 0.1\ntime_points &lt;- seq(0, 10, by = 0.1)\ninitial_conditions &lt;- c(1, 0)\n\n# Compute x(t) for each time point\nresults &lt;- sapply(time_points, function(t) compute_xt(t, initial_conditions))\n\n# Prepare data for plotting\ndata_frame &lt;- data.frame(\n  Time = rep(time_points, each = 2),\n  X_t = c(results[1,], results[2,]),\n  Component = rep(c(\"x1\", \"x2\"), each = length(time_points))\n)\n\n# Plot using ggplot2\nplot &lt;- ggplot(data_frame, aes(x = Time, y = X_t, color = Component)) +\n  geom_line() +\n  labs(title = \"Components of x(t) over Time\",\n       x = \"Time t\",\n       y = \"Value of x(t)\") +\n  theme_minimal() +\n  scale_color_manual(values = c(\"blue\", \"red\"))\n\n# Print the plot\nprint(plot)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCautionCode Description\n\n\n\n\n\n\nMatrix and Eigen Calculations: The matrix \\(A\\) is defined, and its eigenvalues and eigenvectors are computed.\n\nFunction compute_xt: This function calculates the solution \\(x(t)\\). It takes time \\(t\\) and initial conditions as arguments.\n\nIt first solves the equation \\(Vc = x(0)\\) for the coefficients vector \\(c\\) where \\(V\\) is the matrix of eigenvectors. The solve() function is used for solving linear systems.\n\nIt then calculates \\(x(t) = V (c \\cdot \\exp(\\lambda t))\\), where \\(\\exp(\\lambda t)\\) applies the exponential function to each eigenvalue multiplied by \\(t\\), and \\(c\\) is multiplied element-wise.\n\n\nExample Usage: The function is then used to compute \\(x(t)\\) for a specific set of initial conditions at \\(t = 1\\).\n\nThis script allows you to plug in any initial conditions and any time \\(t\\) to see the behavior of the system at that point.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>L31: 10.6 Complex Eigenvalues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html",
+    "href": "Unit4/L32.html",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "",
+    "text": "4.1 Repeated EigenValues.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#repeated-eigenvalues.",
+    "href": "Unit4/L32.html#repeated-eigenvalues.",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "",
+    "text": "Note\n\n\n\n\nTheorem 4.1 (Theorem) Suppose \\(\\lambda\\) is a repeated eigenvalue for the system:\n\\[\\frac{dx}{dt}=ax+by\\] \\[\\frac{dy}{dt}=cx+dy\\]\nwith eigenvector \\(K\\), then\n\\[\\vec{x_1} = Ke^{\\lambda t}\\] \\[\\vec{x_2} = K\\,t\\,e^{\\lambda t}+Pe^{\\lambda t}\\] Where \\(P\\) is to be determined from\n\\[\\begin{bmatrix}a-\\lambda & b\\\\ c& d-\\lambda\\end{bmatrix}\\begin{bmatrix}p_1\\\\p_2\\end{bmatrix}=\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}\\] is a fundamental set.\n\n\n\n\n4.1.1 Example 1:\n\n\n\n\n\n\nTipExample\n\n\n\nFind the general solution to\n\\[\\frac{dx}{dt}=4x-y\\] \\[\\frac{dy}{dt}=x+2y\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\n4.1.2 eigenvalues:\n\\[\\begin{bmatrix}4-\\lambda & -1\\\\ 1& 2-\\lambda\\end{bmatrix}=0\\]\n\\[(4-\\lambda)(2-\\lambda)+1=0\\]\n\\[8-6\\lambda+\\lambda^2+1=0\\] \\[\\lambda^2-6\\lambda+9=0\\] \\[(\\lambda-3)^2=0\\]\n\n\n4.1.3 eigenvectors:\n\\(\\boxed{\\lambda =3}:\\)\n\\[\\begin{bmatrix}4-3 & -1\\\\ 1& 2-3\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=\\begin{bmatrix}0\\\\0\\end{bmatrix}\\]\n\\[k_1-k_2=0\\] \\[k_1=k_2\\] \\[K=\\begin{bmatrix}1\\\\1\\end{bmatrix}\\]\n\n\n4.1.4 Fundamental set:\n\\(\\vec{x_1}\\) is done:\n\\[\\vec{x_1}=Ke^{\\lambda t}= \\begin{bmatrix}1\\\\1\\end{bmatrix}e^{3t} \\] for \\(\\vec{x_2}\\) we need to solve:\n\\[\\begin{bmatrix}1 & -1\\\\ 1& -1\\end{bmatrix}\\begin{bmatrix}p_1\\\\p_2\\end{bmatrix}=\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}\\] \\[\\begin{bmatrix}1 & -1\\\\ 1& -1\\end{bmatrix}\\begin{bmatrix}p_1\\\\p_2\\end{bmatrix}=\\begin{bmatrix}1\\\\1\\end{bmatrix}\\] \\[p_1-p_2=1\\] \\[p_1=1+p_2\\] \\[P=\\begin{bmatrix}2\\\\1\\end{bmatrix}\\]\nTherefore:\n\\[\\vec{x_2}=e^{3t}\\,t\\,\\begin{bmatrix}1\\\\1\\end{bmatrix}+e^{3t}\\begin{bmatrix}2\\\\1\\end{bmatrix}\\]\n\n\n4.1.5 General Solution:\n\\[\\begin{bmatrix}x\\\\y\\end{bmatrix}=c_1e^{3t}\\begin{bmatrix}1\\\\1\\end{bmatrix}+c_2\\left(t\\,e^{3t}\\begin{bmatrix}1\\\\1\\end{bmatrix}+e^{3t}\\begin{bmatrix}2\\\\1\\end{bmatrix}\\right)\\]\n\n\n\n\n\n\n\n\n4.1.6 Example 2:\n\n\n\n\n\n\nTipExample\n\n\n\n\\[\\frac{dx}{dt}=y\\] \\[\\frac{dy}{dt}=-9x+6y\\]\n\n\n\n\n\n\nCautionSolution\n\n\n\n\n\n\\[\\begin{vmatrix}0-\\lambda & 1\\\\ -9&6-\\lambda\\end{vmatrix}\\]\n\\[-6\\lambda+\\lambda^2+9=0\\] \\[(\\lambda-3)^2=0\\]\n\\[\\begin{bmatrix}-3 & 1\\\\ -9& 3\\end{bmatrix}\\begin{bmatrix}k_1\\\\k_2\\end{bmatrix}=\\begin{bmatrix}0\\\\0\\end{bmatrix}\\]\n\\[-3k_1+k_2=0\\] \\[K=\\begin{bmatrix}1\\\\3\\end{bmatrix}\\]\n\\[\\vec{x_1}=Ke^{\\lambda t}= e^{3t}\\begin{bmatrix}1\\\\3\\end{bmatrix}\\]\n\\[\\begin{bmatrix}-3 & 1\\\\ -9& 3\\end{bmatrix}\\begin{bmatrix}p_1\\\\p_2\\end{bmatrix}=\\begin{bmatrix}1\\\\3\\end{bmatrix}\\] \\[-3p_1+p_2=1\\] \\[p_2=1+3p_1\\] \\[P=\\begin{bmatrix}1\\\\4\\end{bmatrix}\\]\n\\[\\vec{x_2}=t\\,e^{3t}\\begin{bmatrix}1\\\\3\\end{bmatrix}+e^{3t}\\begin{bmatrix}1\\\\4\\end{bmatrix}\\]\nThen the general solution is:\n\\[\\begin{bmatrix}x\\\\y\\end{bmatrix}=c_1e^{3t}\\begin{bmatrix}1\\\\3\\end{bmatrix}+c_2\\left(t\\,e^{3t}\\begin{bmatrix}1\\\\3\\end{bmatrix}+e^{3t}\\begin{bmatrix}1\\\\4\\end{bmatrix}\\right)\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#references",
+    "href": "Unit4/L32.html#references",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "4.2 References",
+    "text": "4.2 References\n\nLibreTexts, 10.4: Constant Coefficient Homogeneous Systems I by F.Trench.\nWikipedia: Eigenvalues and eigenvectors\nR CRAN documentation for eigenvalues and eigenvectors",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "previous_units.html",
+    "href": "previous_units.html",
+    "title": "5  Previous Units",
+    "section": "",
+    "text": "5.1 Unit 1\nhttps://efvalder.github.io/lec-book-mat211---Unit1/",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Previous Units</span>"
+    ]
+  },
+  {
+    "objectID": "previous_units.html#unit-2",
+    "href": "previous_units.html#unit-2",
+    "title": "5  Previous Units",
+    "section": "5.2 Unit 2",
+    "text": "5.2 Unit 2\nhttps://efvalder.github.io/lec-book-mat211---Unit2/",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Previous Units</span>"
+    ]
+  },
+  {
+    "objectID": "previous_units.html#unit-3",
+    "href": "previous_units.html#unit-3",
+    "title": "5  Previous Units",
+    "section": "5.3 Unit 3",
+    "text": "5.3 Unit 3\nhttps://efvalder.github.io/lec-book-mat211---Unit3/",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Previous Units</span>"
+    ]
+  },
+  {
+    "objectID": "previous_units.html#unit-4-comeback",
+    "href": "previous_units.html#unit-4-comeback",
+    "title": "5  Previous Units",
+    "section": "5.4 Unit 4 (comeback)",
+    "text": "5.4 Unit 4 (comeback)\nhttps://efvalder.github.io/lec-book-mat211---Unit4/",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Previous Units</span>"
+    ]
+  }
+]
