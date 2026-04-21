@@ -188,19 +188,8 @@ window.Quarto = {
   <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1"><span class="header-section-number">4.1.1</span> Example 1:</a></li>
   <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2"><span class="header-section-number">4.1.6</span> Example 2:</a></li>
   </ul></li>
-  <li><a href="#last-note" id="toc-last-note" class="nav-link" data-scroll-target="#last-note"><span class="header-section-number">5</span> Last Note:</a>
-  <ul class="collapse">
-  <li><a href="#start-with-the-system" id="toc-start-with-the-system" class="nav-link" data-scroll-target="#start-with-the-system"><span class="header-section-number">5.1</span> 1. Start with the system</a></li>
-  <li><a href="#try-an-exponential-solution" id="toc-try-an-exponential-solution" class="nav-link" data-scroll-target="#try-an-exponential-solution"><span class="header-section-number">5.2</span> 2. Try an exponential solution</a></li>
-  <li><a href="#plug-into-the-equation" id="toc-plug-into-the-equation" class="nav-link" data-scroll-target="#plug-into-the-equation"><span class="header-section-number">5.3</span> 3. Plug into the equation</a></li>
-  <li><a href="#why-a---lambda-imathbfv-0" id="toc-why-a---lambda-imathbfv-0" class="nav-link" data-scroll-target="#why-a---lambda-imathbfv-0"><span class="header-section-number">5.4</span> 4. Why <span class="math inline">\((A - \lambda I)\mathbf{v} = 0\)</span>?</a></li>
-  <li><a href="#why-set-the-determinant-equal-to-zero" id="toc-why-set-the-determinant-equal-to-zero" class="nav-link" data-scroll-target="#why-set-the-determinant-equal-to-zero"><span class="header-section-number">5.5</span> 5. Why set the determinant equal to zero?</a></li>
-  <li><a href="#why-we-dont-want-the-zero-vector" id="toc-why-we-dont-want-the-zero-vector" class="nav-link" data-scroll-target="#why-we-dont-want-the-zero-vector"><span class="header-section-number">5.6</span> 6. Why we don’t want the zero vector</a></li>
-  <li><a href="#why-eigenvectors-also-come-from-0" id="toc-why-eigenvectors-also-come-from-0" class="nav-link" data-scroll-target="#why-eigenvectors-also-come-from-0"><span class="header-section-number">5.7</span> 7. Why eigenvectors also come from “= 0”</a></li>
-  <li><a href="#intuition" id="toc-intuition" class="nav-link" data-scroll-target="#intuition"><span class="header-section-number">5.8</span> 8. Intuition</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">5.9</span> 9. Summary</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5.10</span> References</a></li>
-  </ul></li>
+  <li><a href="#last-note" id="toc-last-note" class="nav-link" data-scroll-target="#last-note"><span class="header-section-number">4.2</span> Last Note:</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.3</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -363,19 +352,33 @@ Note
 <!-- ``` -->
 </section>
 </section>
-<section id="last-note" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Last Note:</h1>
+<section id="last-note" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="last-note"><span class="header-section-number">4.2</span> Last Note:</h2>
+<div style="background-color: yellow; border: 2px solid red; padding: 10px;">
 <p>Why <span class="math inline">\(\det(A - \lambda I) = 0\)</span> and <span class="math inline">\((A - \lambda I)\mathbf{v} = 0\)</span> are set equal to zero?</p>
-<section id="start-with-the-system" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="start-with-the-system"><span class="header-section-number">5.1</span> 1. Start with the system</h2>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Explanation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="start-with-the-system" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="start-with-the-system"><span class="header-section-number">4.2.1</span> Start with the system</h3>
 <p>We write a <span class="math inline">\(2\times 2\)</span> system as:</p>
 <p><span class="math display">\[
 \mathbf{u}' = A\mathbf{u}
 \]</span></p>
 <hr>
 </section>
-<section id="try-an-exponential-solution" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="try-an-exponential-solution"><span class="header-section-number">5.2</span> 2. Try an exponential solution</h2>
+<section id="try-an-exponential-solution" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="try-an-exponential-solution"><span class="header-section-number">4.2.2</span> Try an exponential solution</h3>
 <p>We <strong>guess</strong> a solution of the form:</p>
 <p><span class="math display">\[
 \mathbf{u}(t) = e^{\lambda t}\mathbf{v}
@@ -383,8 +386,8 @@ Note
 <p>This works well because exponentials behave nicely under differentiation.</p>
 <hr>
 </section>
-<section id="plug-into-the-equation" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="plug-into-the-equation"><span class="header-section-number">5.3</span> 3. Plug into the equation</h2>
+<section id="plug-into-the-equation" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="plug-into-the-equation"><span class="header-section-number">4.2.3</span> Plug into the equation</h3>
 <p>Differentiate:</p>
 <p><span class="math display">\[
 \mathbf{u}'(t) = \lambda e^{\lambda t}\mathbf{v}
@@ -403,8 +406,8 @@ Note
 \]</span></p>
 <hr>
 </section>
-<section id="why-a---lambda-imathbfv-0" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="why-a---lambda-imathbfv-0"><span class="header-section-number">5.4</span> 4. Why <span class="math inline">\((A - \lambda I)\mathbf{v} = 0\)</span>?</h2>
+<section id="why-a---lambda-imathbfv-0" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="why-a---lambda-imathbfv-0"><span class="header-section-number">4.2.4</span> Why <span class="math inline">\((A - \lambda I)\mathbf{v} = 0\)</span>?</h3>
 <p>This equation means:</p>
 <p><span class="math display">\[
 A\mathbf{v} = \lambda \mathbf{v}
@@ -413,8 +416,8 @@ A\mathbf{v} = \lambda \mathbf{v}
 <p>These are exactly <strong>eigenvectors</strong>, and <span class="math inline">\(\lambda\)</span> is the <strong>eigenvalue</strong>.</p>
 <hr>
 </section>
-<section id="why-set-the-determinant-equal-to-zero" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="why-set-the-determinant-equal-to-zero"><span class="header-section-number">5.5</span> 5. Why set the determinant equal to zero?</h2>
+<section id="why-set-the-determinant-equal-to-zero" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="why-set-the-determinant-equal-to-zero"><span class="header-section-number">4.2.5</span> Why set the determinant equal to zero?</h3>
 <p>We now have a homogeneous system:</p>
 <p><span class="math display">\[
 (A - \lambda I)\mathbf{v} = 0
@@ -429,8 +432,8 @@ A\mathbf{v} = \lambda \mathbf{v}
 \]</span></p>
 <hr>
 </section>
-<section id="why-we-dont-want-the-zero-vector" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="why-we-dont-want-the-zero-vector"><span class="header-section-number">5.6</span> 6. Why we don’t want the zero vector</h2>
+<section id="why-we-dont-want-the-zero-vector" class="level3" data-number="4.2.6">
+<h3 data-number="4.2.6" class="anchored" data-anchor-id="why-we-dont-want-the-zero-vector"><span class="header-section-number">4.2.6</span> Why we don’t want the zero vector</h3>
 <p>If <span class="math inline">\(\mathbf{v} = 0\)</span>, then:</p>
 <p><span class="math display">\[
 \mathbf{u}(t) = e^{\lambda t}\mathbf{0} = \mathbf{0}
@@ -443,8 +446,8 @@ A\mathbf{v} = \lambda \mathbf{v}
 <p>to guarantee nontrivial solutions.</p>
 <hr>
 </section>
-<section id="why-eigenvectors-also-come-from-0" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="why-eigenvectors-also-come-from-0"><span class="header-section-number">5.7</span> 7. Why eigenvectors also come from “= 0”</h2>
+<section id="why-eigenvectors-also-come-from-0" class="level3" data-number="4.2.7">
+<h3 data-number="4.2.7" class="anchored" data-anchor-id="why-eigenvectors-also-come-from-0"><span class="header-section-number">4.2.7</span> Why eigenvectors also come from “= 0”</h3>
 <p>After finding <span class="math inline">\(\lambda\)</span>, we go back and solve:</p>
 <p><span class="math display">\[
 (A - \lambda I)\mathbf{v} = 0
@@ -456,8 +459,8 @@ A\mathbf{v} = \lambda \mathbf{v}
 <p>which naturally leads to a homogeneous system.</p>
 <hr>
 </section>
-<section id="intuition" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="intuition"><span class="header-section-number">5.8</span> 8. Intuition</h2>
+<section id="intuition" class="level3" data-number="4.2.8">
+<h3 data-number="4.2.8" class="anchored" data-anchor-id="intuition"><span class="header-section-number">4.2.8</span> Intuition</h3>
 <ul>
 <li>Most matrices <strong>rotate and stretch</strong> vectors</li>
 <li>Eigenvectors are special directions where the matrix only <strong>stretches</strong></li>
@@ -469,15 +472,19 @@ A\mathbf{v} = \lambda \mathbf{v}
 <p>So everything lines up cleanly.</p>
 <hr>
 </section>
-<section id="summary" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.9</span> 9. Summary</h2>
+<section id="summary" class="level3" data-number="4.2.9">
+<h3 data-number="4.2.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.2.9</span> Summary</h3>
 <ul>
 <li><p>Solve <span class="math inline">\(\det(A - \lambda I) = 0\)</span> → to ensure <strong>nonzero solutions exist</strong></p></li>
 <li><p>Solve <span class="math inline">\((A - \lambda I)\mathbf{v} = 0\)</span> → to find the <strong>directions</strong> (eigenvectors)</p></li>
 </ul>
 </section>
-<section id="references" class="level2 smaller" data-number="5.10">
-<h2 class="smaller anchored" data-number="5.10" data-anchor-id="references"><span class="header-section-number">5.10</span> References</h2>
+</div>
+</div>
+</div>
+</section>
+<section id="references" class="level2 smaller" data-number="4.3">
+<h2 class="smaller anchored" data-number="4.3" data-anchor-id="references"><span class="header-section-number">4.3</span> References</h2>
 <ol type="1">
 <li><p><a href="https://math.libretexts.org/Courses/Monroe_Community_College/MTH_225_Differential_Equations/z10%3A_Linear_Systems_of_Differential_Equations/10.4%3A_Constant_Coefficient_Homogeneous_Systems_I">LibreTexts, 10.4: Constant Coefficient Homogeneous Systems I by F.Trench.</a></p></li>
 <li><p><a href="https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors">Wikipedia: Eigenvalues and eigenvectors</a></p></li>
@@ -528,7 +535,6 @@ A\mathbf{v} = \lambda \mathbf{v}
 <!-- `R` has not problem working with imaginary eigenvectors... -->
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
