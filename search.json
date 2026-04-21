@@ -350,11 +350,101 @@
     ]
   },
   {
+    "objectID": "Unit4/L32.html#start-with-the-system",
+    "href": "Unit4/L32.html#start-with-the-system",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.1 1. Start with the system",
+    "text": "5.1 1. Start with the system\nWe write a \\(2\\times 2\\) system as:\n\\[\n\\mathbf{u}' = A\\mathbf{u}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#try-an-exponential-solution",
+    "href": "Unit4/L32.html#try-an-exponential-solution",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.2 2. Try an exponential solution",
+    "text": "5.2 2. Try an exponential solution\nWe guess a solution of the form:\n\\[\n\\mathbf{u}(t) = e^{\\lambda t}\\mathbf{v}\n\\]\nThis works well because exponentials behave nicely under differentiation.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#plug-into-the-equation",
+    "href": "Unit4/L32.html#plug-into-the-equation",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.3 3. Plug into the equation",
+    "text": "5.3 3. Plug into the equation\nDifferentiate:\n\\[\n\\mathbf{u}'(t) = \\lambda e^{\\lambda t}\\mathbf{v}\n\\]\nSubstitute into the system:\n\\[\n\\lambda e^{\\lambda t}\\mathbf{v} = A(e^{\\lambda t}\\mathbf{v})\n\\]\nFactor out \\(e^{\\lambda t}\\):\n\\[\n\\lambda \\mathbf{v} = A\\mathbf{v}\n\\]\nRearrange:\n\\[\n(A - \\lambda I)\\mathbf{v} = 0\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#why-a---lambda-imathbfv-0",
+    "href": "Unit4/L32.html#why-a---lambda-imathbfv-0",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.4 4. Why \\((A - \\lambda I)\\mathbf{v} = 0\\)?",
+    "text": "5.4 4. Why \\((A - \\lambda I)\\mathbf{v} = 0\\)?\nThis equation means:\n\\[\nA\\mathbf{v} = \\lambda \\mathbf{v}\n\\]\nSo we are looking for vectors \\(\\mathbf{v}\\) that only get scaled, not rotated.\nThese are exactly eigenvectors, and \\(\\lambda\\) is the eigenvalue.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#why-set-the-determinant-equal-to-zero",
+    "href": "Unit4/L32.html#why-set-the-determinant-equal-to-zero",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.5 5. Why set the determinant equal to zero?",
+    "text": "5.5 5. Why set the determinant equal to zero?\nWe now have a homogeneous system:\n\\[\n(A - \\lambda I)\\mathbf{v} = 0\n\\]\nFrom linear algebra:\n\nIf \\(\\det(A - \\lambda I) \\neq 0\\), then the only solution is \\(\\mathbf{v} = 0\\)\nIf we want a nonzero vector \\(\\mathbf{v}\\), we must have:\n\n\\[\n\\det(A - \\lambda I) = 0\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#why-we-dont-want-the-zero-vector",
+    "href": "Unit4/L32.html#why-we-dont-want-the-zero-vector",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.6 6. Why we don’t want the zero vector",
+    "text": "5.6 6. Why we don’t want the zero vector\nIf \\(\\mathbf{v} = 0\\), then:\n\\[\n\\mathbf{u}(t) = e^{\\lambda t}\\mathbf{0} = \\mathbf{0}\n\\]\nThat’s just the trivial solution, which isn’t useful.\nSo we force:\n\\[\n\\det(A - \\lambda I) = 0\n\\]\nto guarantee nontrivial solutions.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#why-eigenvectors-also-come-from-0",
+    "href": "Unit4/L32.html#why-eigenvectors-also-come-from-0",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.7 7. Why eigenvectors also come from “= 0”",
+    "text": "5.7 7. Why eigenvectors also come from “= 0”\nAfter finding \\(\\lambda\\), we go back and solve:\n\\[\n(A - \\lambda I)\\mathbf{v} = 0\n\\]\nThis is still set equal to zero because we are solving the condition:\n\\[\nA\\mathbf{v} = \\lambda \\mathbf{v}\n\\]\nwhich naturally leads to a homogeneous system.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#intuition",
+    "href": "Unit4/L32.html#intuition",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.8 8. Intuition",
+    "text": "5.8 8. Intuition\n\nMost matrices rotate and stretch vectors\nEigenvectors are special directions where the matrix only stretches\nExponentials match perfectly with stretching:\n\n\\[\n\\frac{d}{dt}(e^{\\lambda t}) = \\lambda e^{\\lambda t}\n\\]\nSo everything lines up cleanly.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
+    "objectID": "Unit4/L32.html#summary",
+    "href": "Unit4/L32.html#summary",
+    "title": "4  L32: 10.4 Repeated EigenValues.",
+    "section": "5.9 9. Summary",
+    "text": "5.9 9. Summary\n\nSolve \\(\\det(A - \\lambda I) = 0\\) → to ensure nonzero solutions exist\nSolve \\((A - \\lambda I)\\mathbf{v} = 0\\) → to find the directions (eigenvectors)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
+    ]
+  },
+  {
     "objectID": "Unit4/L32.html#references",
     "href": "Unit4/L32.html#references",
     "title": "4  L32: 10.4 Repeated EigenValues.",
-    "section": "4.2 References",
-    "text": "4.2 References\n\nLibreTexts, 10.4: Constant Coefficient Homogeneous Systems I by F.Trench.\nWikipedia: Eigenvalues and eigenvectors\nR CRAN documentation for eigenvalues and eigenvectors",
+    "section": "5.10 References",
+    "text": "5.10 References\n\nLibreTexts, 10.4: Constant Coefficient Homogeneous Systems I by F.Trench.\nWikipedia: Eigenvalues and eigenvectors\nR CRAN documentation for eigenvalues and eigenvectors",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>L32: 10.4 Repeated EigenValues.</span>"
     ]
